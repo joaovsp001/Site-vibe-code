@@ -961,7 +961,114 @@ details[open] summary::after {
 }
 
 /* =============================================
-   DESKTOP (≥ 768px)
+   MOBILE FIRST (base — até 767px)
+   ============================================= */
+@media (max-width: 767px) {
+
+    /* Espaçamentos gerais */
+    .section { padding: 3.5rem 0; }
+
+    /* Banner */
+    .urgency-banner {
+        font-size: 0.78rem;
+        padding: 8px 12px;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+        line-height: 1.4;
+    }
+    #timer-display { font-size: 0.9rem; }
+    body { padding-top: 58px; }
+
+    /* Hero */
+    .hero { padding: 3rem 0 5rem; min-height: auto; }
+    .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
+
+    .hero-eyebrow { justify-content: center; font-size: 0.72rem; }
+    .eyebrow-line { display: none; }
+
+    .title-small { font-size: 1.6rem; letter-spacing: 3px; }
+    .title-big   { font-size: 5.5rem; letter-spacing: -1px; }
+
+    .hero-desc {
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Centraliza o CTA do hero */
+    .hero-text .cta-wrapper,
+    .hero-text > .btn { 
+        display: flex; 
+        justify-content: center; 
+    }
+    .hero-text .btn { width: 100%; justify-content: center; }
+
+    /* Mockup do livro — menor e sem animação pesada */
+    .book-mockup { width: 180px; }
+    .book-cover  { width: 180px; min-height: 260px; }
+    .book-cover-inner { padding: 1.75rem 1.5rem; }
+    .book-title-big { font-size: 2.4rem; }
+    .book-subtitle  { font-size: 0.58rem; }
+    .book-sprints-preview { font-size: 0.5rem; }
+    .book-spine { width: 14px; left: -14px; }
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotateY(-4deg); }
+        50%       { transform: translateY(-8px) rotateY(-6deg); }
+    }
+
+    /* Scroll hint some no mobile */
+    .hero-scroll-hint { display: none; }
+
+    /* Seção Problema */
+    .problem-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .problem-quote { padding: 2rem 1.5rem; }
+    .problem-quote blockquote { font-size: 1.5rem; }
+
+    /* Seção Solução */
+    .solution-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+    .solution-card { padding: 1.5rem; }
+    .solution-number { font-size: 2.8rem; }
+    .solution-card h3 { font-size: 1.2rem; }
+
+    /* Sprints */
+    .sprints-grid { grid-template-columns: 1fr; }
+    .sprint-item { padding: 1.25rem 1.25rem; gap: 1rem; }
+    .sprint-content h4 { font-size: 1.05rem; }
+    .sprint-content p  { font-size: 0.85rem; }
+
+    .sprints-cta .btn { width: 100%; justify-content: center; }
+
+    /* Testimonials */
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .testimonial-placeholder { min-height: 200px; }
+
+    /* FAQ */
+    summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; }
+    summary::after { right: 1.25rem; }
+    .faq-answer { padding: 0 1.5rem 1.25rem; }
+
+    /* Oferta final */
+    .offer-box { 
+        grid-template-columns: 1fr; 
+        gap: 2rem; 
+        padding: 2rem 1.5rem; 
+    }
+    .offer-title { font-size: 2rem; }
+    .price-new   { font-size: 3rem; }
+    .offer-includes li { font-size: 0.93rem; }
+    .btn-large { font-size: 1rem; padding: 1.1rem 1.5rem; }
+
+    /* Section title geral no mobile */
+    .section-title { font-size: 2rem; }
+    .section-subtitle { font-size: 0.97rem; }
+
+    /* Footer */
+    .footer-links { gap: 1.25rem; }
+}
+
+/* =============================================
+   TABLET / DESKTOP (≥ 768px)
    ============================================= */
 @media (min-width: 768px) {
     .section { padding: 8rem 0; }
@@ -983,12 +1090,6 @@ details[open] summary::after {
 
 @media (min-width: 1024px) {
     .solution-grid { grid-template-columns: repeat(4, 1fr); }
-
-    .sprints-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .sprint-item {
-        padding: 1.25rem 2.5rem;
-    }
+    .sprints-grid { grid-template-columns: 1fr; }
+    .sprint-item { padding: 1.25rem 2.5rem; }
 }
